@@ -1,6 +1,23 @@
 ;; color theme
 (color-theme-solarized-dark)
 
+;; osx specific
+(if (or (eq window-system 'mac) (eq window-system 'ns))
+    (progn
+      (setq browse-url-browser-function 'browse-url-default-macosx-browser)
+
+      (defun dired-open-mac ()
+        (interactive)
+        (let ((file-name (dired-get-file-for-visit)))
+          (if (file-exists-p file-name)
+              (call-process "/usr/bin/open" nil 0 nil file-name))))
+      (add-hook 'dired-mode-hook
+                '(lambda ()
+                   (define-key dired-mode-map "o" 'dired-open-mac)))
+
+      (setq mac-option-modifier 'none
+            mac-command-modifier 'meta)))
+
 ;;;;;org-mode
 ;; Org-specific settings are kept in the root of my org-directory.
 ;; These has to be individually catered anyway so it doesnt really
