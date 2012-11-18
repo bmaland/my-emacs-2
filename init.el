@@ -2,4 +2,5 @@
 
 (require 'my-packages)
 (require 'my-settings)
+(require 'my-elisp)
 (require 'my-bindings)
