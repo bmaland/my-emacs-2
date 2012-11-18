@@ -80,6 +80,7 @@
 
 ;; Default minor modes
 (auto-compression-mode t)
+(column-number-mode t)
 (display-time-mode t)
 (global-font-lock-mode t)
 (ido-mode t)
@@ -88,6 +89,7 @@
 (show-paren-mode t)
 (transient-mark-mode t)
 (winner-mode t)
+(global-hl-line-mode t)
 
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
