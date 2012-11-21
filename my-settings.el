@@ -58,7 +58,7 @@
       scroll-preserve-screen-position 1
       font-lock-maximum-decoration t
       inhibit-default-init t
-      visible-bell nil
+      visible-bell t
       shift-select-mode nil
 
       vc-follow-symlinks nil

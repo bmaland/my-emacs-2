@@ -21,11 +21,12 @@
   '(
     anything
     color-theme-solarized
+    liquid-mode
     magit
     org-mode
+    rspec-mode
     rvm
     yasnippet
-    liquid-mode
     ))
 
 (el-get 'sync my-packages)

@@ -1,6 +1,5 @@
 (global-set-key "\C-ca" 'org-agenda)
 
-
 (global-set-key (kbd "C-o") '(lambda ()
                                (interactive)
                                (open-line 1)
@@ -57,5 +56,8 @@
 (global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 (global-set-key (kbd "M-SPC")   'set-mark-command)
 (global-set-key (kbd "C-x m")   'magit-status)
+
+(global-set-key [(control shift k)] 'kill-whole-line)
+(global-set-key [(control shift d)] 'duplicate-line)
 
 (provide 'my-bindings)
