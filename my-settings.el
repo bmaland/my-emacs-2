@@ -47,8 +47,10 @@
       ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-create-new-buffer 'always
-      ido-use-filename-at-point t
+      ido-use-filename-at-point nil
       ido-max-prospects 10
+
+      enable-recursive-minibuffers t
 
       dabbrev-case-replace nil ;; Make sure case is preserved
       scroll-margin 3
@@ -65,8 +67,7 @@
       tramp-default-method "ssh"
 
       display-time-string-forms '((propertize
-                                   (concat " " 24-hours ":" minutes " ")
-                                   'face 'egoge-display-time))
+                                   (concat " " 24-hours ":" minutes " ")))
 
       snippet-dir "~/.emacs.d/yasnippet/snippets/"
       custom-file "~/.emacs.d/custom.el"
@@ -78,7 +79,10 @@
               tab-width 2
               imenu-auto-rescan t)
 
+(require 'uniquify)
+
 ;; Default minor modes
+(minibuffer-depth-indicate-mode t)
 (auto-compression-mode t)
 (column-number-mode t)
 (display-time-mode t)
@@ -90,6 +94,7 @@
 (transient-mark-mode t)
 (winner-mode t)
 (global-hl-line-mode t)
+(yas-global-mode 1)
 
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -100,5 +105,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
 (provide 'my-settings)

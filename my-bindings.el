@@ -28,7 +28,6 @@
 
 (global-set-key "\M-%"     'query-replace-regexp)
 
-(global-set-key "\C-xf"         'recentf-ido-find-file)
 (global-set-key "\C-xx"         'file-cache-ido-find-file)
 (global-set-key "\M-`"          'ff-find-other-file)
 (global-set-key "\C-c1"         'find-grep-dired)
@@ -53,7 +52,6 @@
 (global-set-key [f6]            'bookmark-jump)
 (global-set-key (kbd "TAB")     'indent-according-to-mode)
 (global-set-key [backspace]     'delete-empty-pair)
-(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
 (global-set-key (kbd "M-SPC")   'set-mark-command)
 (global-set-key (kbd "C-x m")   'magit-status)
 
