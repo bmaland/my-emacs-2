@@ -1,3 +1,9 @@
+;; smex
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
 (global-set-key "\C-ca" 'org-agenda)
 
 (global-set-key (kbd "C-o") '(lambda ()
@@ -43,7 +49,8 @@
 (global-set-key "\C-\M-w"       'my-mark-word)
 (global-set-key (kbd "M-@")     'my-mark-word)
 (global-set-key (kbd "M-\"")    'select-text-in-quote)
-(global-set-key (kbd "M-2")     'extend-selection)
+;;(global-set-key (kbd "M-2")     'extend-selection)
+(global-set-key (kbd "M-2") 'er/expand-region)
 (global-set-key "\C-x\C-k"      'kill-region)
 (global-set-key "\C-c\C-k"      'kill-region)
 (global-set-key "\C-j"          'newline)
@@ -57,5 +64,11 @@
 
 (global-set-key [(control shift k)] 'kill-whole-line)
 (global-set-key [(control shift d)] 'duplicate-line)
+
+(global-set-key (kbd "C-x gf") 'textmate-goto-file)
+(global-set-key (kbd "M-g f") 'textmate-goto-file)
+(global-set-key (kbd "C-x gs") 'textmate-goto-symbol)
+;; (global-set-key (kbd "C-x ga") 'ack-in-project)
+;; (global-set-key (kbd "C-x gd") 'google-define))
 
 (provide 'my-bindings)

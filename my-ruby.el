@@ -21,6 +21,7 @@
              (local-set-key [return] 'reindent-then-newline-and-indent)
              (local-set-key (kbd "M-e") 'ruby-forward-sexp)
              (local-set-key (kbd "M-a") 'ruby-backward-sexp)
+             (local-set-key (kbd "M-C-h") 'er/mark-ruby-block-up)
              ))
 
 (defadvice rspec-compile (around rspec-compile-around)

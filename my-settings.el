@@ -1,5 +1,4 @@
-;; color theme
-(color-theme-solarized-dark)
+(require 'tomorrow-night-theme)
 
 ;; osx specific
 (if (or (eq window-system 'mac) (eq window-system 'ns))

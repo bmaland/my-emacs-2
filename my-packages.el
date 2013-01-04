@@ -20,12 +20,15 @@
 (setq my-packages
   '(
     anything
-    color-theme-solarized
+    expand-region
     liquid-mode
     magit
     org-mode
     rspec-mode
     rvm
+    smex
+    textmate
+    tomorrow-theme
     yasnippet
     ))
 
