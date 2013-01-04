@@ -6,3 +6,7 @@
 (require 'my-bindings)
 (require 'my-hooks)
 (require 'my-ruby)
+
+(load custom-file 'noerror)
+
+(server-start)
