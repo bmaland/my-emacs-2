@@ -1,5 +1,11 @@
 (require 'tomorrow-night-theme)
 
+(unless (eq window-system 'w32)
+  (progn
+    (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin:"
+                           (getenv "HOME") "/dotfiles/bin"))
+    (setq exec-path (append exec-path '("/usr/local/bin")))))
+
 ;; osx specific
 (if (or (eq window-system 'mac) (eq window-system 'ns))
     (progn
