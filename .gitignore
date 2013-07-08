@@ -30,3 +30,5 @@ server/server
 *~
 el-get
 elpa
+bookmarks
+.mc-lists.el
