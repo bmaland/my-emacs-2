@@ -46,11 +46,12 @@
 (global-set-key (kbd "C-x w")   'backward-kill-sexp)
 (global-set-key (kbd "M-SPC")   'delete-horizontal-space)
 
-(global-set-key "\C-\M-w"       'my-mark-word)
-(global-set-key (kbd "M-@")     'my-mark-word)
 (global-set-key (kbd "M-\"")    'select-text-in-quote)
 ;;(global-set-key (kbd "M-2")     'extend-selection)
 (global-set-key (kbd "M-2") 'er/expand-region)
+(global-set-key (kbd "M-3") 'mark-whole-buffer)
+(global-set-key (kbd "M-4") 'end-of-buffer)
+(global-set-key (kbd "M-1") 'beginning-of-buffer)
 (global-set-key "\C-x\C-k"      'kill-region)
 (global-set-key "\C-c\C-k"      'kill-region)
 (global-set-key "\C-j"          'newline)
@@ -69,6 +70,5 @@
 (global-set-key (kbd "M-g f") 'textmate-goto-file)
 (global-set-key (kbd "C-x gs") 'textmate-goto-symbol)
 ;; (global-set-key (kbd "C-x ga") 'ack-in-project)
-;; (global-set-key (kbd "C-x gd") 'google-define))
 
 (provide 'my-bindings)

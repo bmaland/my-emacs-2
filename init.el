@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/bjorn")
 
 (require 'my-packages)
 (require 'my-settings)

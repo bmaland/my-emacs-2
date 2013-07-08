@@ -312,12 +312,6 @@ Delimiters are paired characters: ()[]<>«»“”‘’「」, including \"\"."
   "Evaluate the buffer with ruby."
   (shell-command-on-region (point-min) (point-max) "ruby"))
 
-(defun my-mark-word ()
-  "Marks the whole word the cursor is placed on"
-  (interactive)
-  (backward-word)
-  (mark-word))
-
 ;; TODO fix this, probably tramp issue
 (defun find-alternative-file-with-sudo ()
   (interactive)
@@ -472,7 +466,7 @@ Delimiters are paired characters: ()[]<>«»“”‘’「」, including \"\"."
 (defvar insert-time-format "%T"
   "*Format for \\[insert-time] (c.f. 'format-time-string' for how to format).")
 
-(defvar insert-date-format "%d.%m.%Y"
+(defvar insert-date-format "%Y-%m-%d"
   "*Format for \\[insert-date] (c.f. 'format-time-string' for how to format).")
 
 (defun insert-time ()
