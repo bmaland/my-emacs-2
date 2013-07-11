@@ -23,6 +23,18 @@
                (indent-line-to arg-indent)))
         (when (> offset 0) (forward-char offset))))))
 
+(defun comment-or-uncomment-line ()
+  (interactive)
+  (setq cur (point))
+  (beginning-of-line)
+  (comment-or-uncomment-region (point) (point-at-eol))
+  (goto-char cur))
+
+(defun my-comment-or-uncomment-region (beg end &optional arg)
+  (interactive "*r\nP")
+  (if (not (region-active-p))
+    (comment-or-uncomment-line)
+    (comment-or-uncomment-region beg end arg)))
 
 (defun align-to-colon (begin end)
   "Align region to colon (:) signs"
