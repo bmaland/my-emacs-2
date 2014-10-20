@@ -50,6 +50,7 @@
     pretty-symbols
     rhtml-mode
     magit
+    git-timemachine
     ))
 
 (el-get 'sync my-packages)
