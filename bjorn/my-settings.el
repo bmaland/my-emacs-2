@@ -1,11 +1,13 @@
-(require 'tomorrow-night-theme)
-(require 'uniquify)
+(require 'tomorrow-night-theme nil 'noerror)
 
 (require 'package)
 (add-to-list 'package-archives 
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
+
+(if (eq window-system 'w32)
+    (setq default-directory (getenv "HOME")))
 
 (unless (eq window-system 'w32)
   (progn
@@ -93,6 +95,8 @@
 
 (require 'uniquify)
 
+(require 'cl)
+
 ;; Default minor modes
 (minibuffer-depth-indicate-mode t)
 (auto-compression-mode t)
@@ -106,10 +110,12 @@
 (transient-mark-mode t)
 (winner-mode t)
 (global-hl-line-mode t)
-(yas-global-mode 1)
+(if (fboundp 'yas-global-mode)
+    (yas-global-mode 1))
 
-(require 'golden-ratio)
-(golden-ratio-mode t)
+(when (boundp 'golden-ration)
+  (require 'golden-ratio)
+  (golden-ratio-mode t))
 
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
