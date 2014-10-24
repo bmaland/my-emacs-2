@@ -1,5 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/el-get")
 
+(if (not (file-exists-p (concat (getenv "HOME") "/.emacs.d/el-get")))
+    (make-directory (concat (getenv "HOME") "/.emacs.d/el-get")))
+
 (require 'el-get)
 
 (setq el-get-sources
