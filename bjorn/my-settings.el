@@ -113,9 +113,8 @@
 (if (fboundp 'yas-global-mode)
     (yas-global-mode 1))
 
-(when (boundp 'golden-ration)
-  (require 'golden-ratio)
-  (golden-ratio-mode t))
+(require 'golden-ratio nil 'noerror)
+(if (fboundp 'golden-ratio-mode) (golden-ratio-mode t))
 
 (if (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
