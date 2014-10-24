@@ -1,12 +1,6 @@
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(add-to-list 'load-path "~/.emacs.d/vendor/el-get")
 
-;; make sure el-get is installed
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
+(require 'el-get)
 
 (setq el-get-sources
       '(
@@ -38,19 +32,13 @@
     anything
     expand-region
     golden-ratio
-    liquid-mode
-    org-mode
-    rspec-mode
-    rvm
     smex
     textmate
     tomorrow-theme
-    yasnippet
-    how-do-i
-    pretty-symbols
-    rhtml-mode
+    ;; yasnippet
+    ;; pretty-symbols
     magit
-    git-timemachine
+    ;; git-timemachine
     ))
 
 (el-get 'sync my-packages)
