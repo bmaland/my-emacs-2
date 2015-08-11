@@ -127,5 +127,6 @@
 (put 'downcase-region 'disabled nil)
 
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . js2-mode))
 
 (provide 'my-settings)
