@@ -93,6 +93,8 @@
               tab-width 2
               imenu-auto-rescan t)
 
+(setq magit-push-always-verify 'nil)
+
 (require 'uniquify)
 
 (require 'cl)
