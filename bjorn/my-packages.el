@@ -18,8 +18,6 @@
         yasnippet
         pretty-symbols
         magit
-        git-timemachine
-        coffee-mode
         ))
 
 (el-get 'sync my-packages)
