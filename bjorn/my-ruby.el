@@ -18,7 +18,7 @@
 
 (add-hook 'ruby-mode-hook
           '(lambda ()
-             (pretty-symbols-mode t)
+             (prettify-symbols-mode t)
              (setq ruby-deep-indent-paren nil)
              (setq c-tab-always-indent nil)
              (setq ruby-use-encoding-map nil)

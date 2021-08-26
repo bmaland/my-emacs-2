@@ -1,4 +1,4 @@
-(add-hook 'emacs-lisp-mode 'pretty-symbols-mode)
+(add-hook 'emacs-lisp-mode 'prettify-symbols-mode)
 
 (add-hook 'prog-mode-hook 'subword-mode)
 

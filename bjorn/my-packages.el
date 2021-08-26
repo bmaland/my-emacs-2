@@ -16,7 +16,6 @@
         textmate
         tomorrow-theme
         yasnippet
-        pretty-symbols
         magit
         ))
 
